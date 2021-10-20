@@ -54,7 +54,7 @@ class mQuotesMod(loader.Module):
 
     def __init__(self):
         self.config = loader.ModuleConfig(
-            "QUOTE_MESSAGES_LIMIT", 50, "Messages limit",
+            "QUOTE_MESSAGES_LIMIT", 100, "Messages limit",
             "MAX_WIDTH", 384, "Max width (px)",
             "SCALE_FACTOR", 5, "Scale factor",
             "SQUARE_AVATAR", false, "Square avatar",
