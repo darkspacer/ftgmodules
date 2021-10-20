@@ -1,5 +1,3 @@
-# API & module author: @mishase
-
 # requires: requests Pillow cryptg
 
 import logging
