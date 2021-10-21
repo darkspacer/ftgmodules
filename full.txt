@@ -5,3 +5,5 @@ quotes
 report
 saytext
 searchmusic
+textgenerator
+ytdl
