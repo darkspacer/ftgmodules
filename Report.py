@@ -21,7 +21,7 @@ class reportadminsMod(loader.Module):
             admin = []
             for u in user:
                 admin.append(mention_html(u.id, "\u200b"))
-            text = f"<b><a href='tg://user?id={reply_message.sender_id}'>{reply_user.user.first_name}</a> Доложено админам.\nЕсли прочитали удалите\nИзвените за беспокойство бум</b>"
+            text = f"<b><a href='tg://user?id={reply_message.sender_id}'>{reply_user.user.first_name}</a> Доложено админам.\nЕсли прочитали удалите\nИзвените за беспокойство</b>"
             text += "".join(admin)
             await event.client.send_message(event.chat_id, text, reply_to=reply_message.id)
             await event.delete()
