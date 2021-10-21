@@ -2,3 +2,6 @@ audioConverter
 fake_Actions
 qr_tools
 quotes
+report
+saytext
+searchmusic
