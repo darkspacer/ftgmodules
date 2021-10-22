@@ -1,0 +1,10 @@
+audioConverter
+fake_actions
+moduleinfo
+qr_tools
+quotes
+report
+saytext
+searchmusic
+textgenerator
+ytdl
