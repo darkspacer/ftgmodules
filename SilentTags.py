@@ -24,7 +24,7 @@ class SilentTagsMod(loader.Module):
     strings = {
         "name": "SilentTags",
         "tagged": "<b>👋🏻 Тебя отметили в <a href=\"{}\">{}</a> by <a href=\"tg://user?id={}\">{}</a></b>\n<code>Message:</code>\n{}\n<b>Link: <a href=\"https://t.me/c/{}/{}\">click</a></b>",
-        "tag_mentioned": "<b>👾 [Silent Tags]: Пользователь не получил уведомление об этом упоминании. Дождитесь ответа.</b>", 
+        "tag_mentioned": "<b>👾[Silent Tags]: Пользователь не получил уведомление об этом упоминании. Дождитесь ответа.</b>", 
         "stags_status": "<b>👾 Silent Tags are {}</b>"
     }
 
