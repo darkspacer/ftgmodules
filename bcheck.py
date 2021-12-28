@@ -41,6 +41,7 @@ class BCheckMod(loader.Module):
             if 'NOT_FOUND' not in dt:
                 check_result += "\n    <a href=\"tg://user?id=" + str(user.id) + "}\">" + (str(user.first_name) + " " + str(user.last_name)).replace(' None', "") + "</a>: <code>" + dt + "</code>"
                 await message.edit(check_result + '\n\n' + self.strings('check_in_progress'))
+                await sleep(1)
 
 
         if check_result == self.strings('search_header', message):
@@ -61,7 +62,7 @@ class BCheckMod(loader.Module):
             if 'NOT_FOUND' not in dt:
                 check_result += "\n    <a href=\"tg://user?id=" + str(user.id) + "}\">" + (str(user.first_name) + " " + str(user.last_name)).replace(' None', "") + "</a>: <code>" + dt + "</code>"
                 await msg.edit(check_result + '\n\n' + self.strings('check_in_progress', message))
-
+                await sleep(1)
 
         if check_result == self.strings('search_header', message):
             check_result = self.strings('not_found', message)
