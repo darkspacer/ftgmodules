@@ -46,6 +46,9 @@ class BCheckMod(loader.Module):
             if 'NOT_FOUND' not in dt:
                 check_result += "\n    <a href=\"tg://user?id=" + str(user.id) + "}\">" + (str(user.first_name) + " " + str(user.last_name)).replace(' None', "") + "</a>: <code>" + dt + "</code>"
 
+        if check_result == self.strings('search_header', message):
+            check_result = self.strings('not_found', message)
+
         await msg.edit(check_result)
 
 
