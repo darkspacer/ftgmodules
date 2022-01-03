@@ -31,7 +31,7 @@ class BCheckMod(loader.Module):
         if check_result == self.strings('search_header', message):
             check_result = self.strings('not_found', message)
 
-        await message.edit(check_result) 
+        await client.send_message(message.chat_id,check_result) 
 
     async def bchecksilentcmd(self, message):
         """Проверить всех участников чата (Тихий режим)"""
