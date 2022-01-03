@@ -39,7 +39,7 @@ class BCheckMod(loader.Module):
         msg = await message.client.send_message('me', self.strings('check_started', message))
         check_result = self.strings('search_header', message)
 
-        async for user in message.client.iter_participants(to_id):
+        async for user in message.client.iter_participants(message.to_id):
             dt = requests.get('http://api.murix.ru/eye?v=1.2&uid=' + str(user.id)).json()
             # await message.reply("<code>" + json.dumps(dt, indent=4) + "</code>")
             dt = dt['data']
