@@ -8,10 +8,10 @@ import subprocess
 # requires: pytube
 
 @loader.tds
-class YouTubeMod(loader.Module):
+class YouTube-DlMod(loader.Module):
     """Download YouTube video"""
     strings = {
-        'name': 'YouTube',
+        'name': 'YouTube-Dl',
         'args': '🎞 <b>You need to specify link</b>',
         'downloading': '🎞 <b>Downloading...</b>',
         'not_found': '🎞 <b>Video not found...</b>'
