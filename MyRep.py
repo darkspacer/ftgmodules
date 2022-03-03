@@ -1,6 +1,5 @@
-# @Sekai_Yoneya 
-
 from .. import loader, utils
+import random
 
 @loader.tds
 class MyRepMod(loader.Module):
@@ -39,23 +38,25 @@ class MyRepMod(loader.Module):
         try:
             number = self.db.get("MyRep", "my_repa", 0)
             repstatus = self.db.get("MyRep", "repstatus")
+            emoji = ['😊', '😘', '♥️', '😻', '🤩', '🥰', '💖']
+            emoji2 = ['😭', '😢', '🥺', '😡', '😠', '😖', '💔']
             if message.mentioned:
                 if repstatus is not False:
                     if message.text == "+":
                         number += 1
                         self.db.set("MyRep", "my_repa", number)
-                        await message.reply(f"<b>Ты повысил мою репутацию!\nНовое значение: {number}.</b>")
+                        await message.reply(f"<b>{random.choice(emoji)} Ты повысил мою репутацию {random.choice(emoji)}\nНовое значение: {number}.</b>")
                     if message.text == "+2":
                         number += 2
                         self.db.set("MyRep", "my_repa", number)
-                        await message.reply(f"<b>Ты повысил мою репутацию!\nНовое значение: {number}.</b>")
+                        await message.reply(f"<b>{random.choice(emoji)} Ты повысил мою репутацию {random.choice(emoji)}\nНовое значение: {number}.</b>")
                     if message.text == "+++":
                         number += 3
                         self.db.set("MyRep", "my_repa", number)
-                        await message.reply(f"<b>Ты повысил мою репутацию!\nНовое значение: {number}.</b>")
+                        await message.reply(f"<b>{random.choice(emoji)} Ты повысил мою репутацию! {random.choice(emoji)}\nНовое значение: {number}.</b>")
 
                     elif message.text == "-":
                         total = int(number) - 1
                         self.db.set("MyRep", "my_repa", total)
-                        await message.reply(f"<b>Ты понизил мою репутацию!\nНовое значение: {total}.</b>")
+                        await message.reply(f"<b>{random.choice(emoji2)}Ты понизил мою репутацию{random.choice(emoji2)}\nНовое значение: {total}.</b>")
         except: pass
